@@ -1,5 +1,5 @@
 #read in raw data file
-testData <- read.table("household_power_consumption.txt", header = TRUE, sep = ";", stringsAsFactors = FALSE)
+testData <- read.table("household_power_consumption.txt", header = TRUE, sep = ";", stringsAsFactors = FALSE, na.strings = "?")
 
 #filter dates for those specified in assignment
 filteredData <- testData[testData$Date == "1/2/2007" | testData$Date == "2/2/2007", ]
